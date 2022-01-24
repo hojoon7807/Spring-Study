@@ -1,9 +1,11 @@
 package spring.studyspring.repository;
 
+import org.springframework.stereotype.Repository;
 import spring.studyspring.domain.Member;
 
 import java.util.*;
 
+//아직 DB가 정해지지 않음
 public class MemoryMemberRepository implements MemberRepository{
     //실무에선 동시성 문제 때문에 ConcurrentHashMap 사용
     private static Map<Long,Member> store = new HashMap<>();
