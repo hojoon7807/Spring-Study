@@ -17,6 +17,7 @@ public class HelloController {
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name")String name,Model model){
         model.addAttribute("name",name);
+        //viewResolver
         return "hello-template";
     }
 
@@ -31,6 +32,7 @@ public class HelloController {
     public Hello hellApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
+        //HttpMessageConverter (MappgingJackson2,string)작동
         return hello;
     }
 
