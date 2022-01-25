@@ -3,6 +3,7 @@ package spring.studyspring;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import spring.studyspring.aop.TimeTraceAop;
 import spring.studyspring.repository.*;
 import spring.studyspring.service.MemberService;
 
@@ -33,5 +34,9 @@ public class SpringConfig {
 //        //return new JdbcTemplateMemberRespository(dataSource);
 //        //return new JpaMemberRepository(em);
 //
+//    }
+//    @Bean
+//    public TimeTraceAop timeTraceAop(){
+//        return new TimeTraceAop();
 //    }
 }
